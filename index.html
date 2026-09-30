@@ -1,0 +1,1995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Careapy India | Compassionate Elder Care</title>
+  <meta
+    name="description"
+    content="Careapy India provides compassionate elder care, companionship, nursing support, medical assistance and physiotherapy."
+  />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <style>
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: #f7fbf9;
+      color: #193b35;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* =========================================================
+       VARIABLES
+    ========================================================= */
+
+    :root {
+      --primary: #2d7a6a;
+      --primary-dark: #205d51;
+      --primary-light: #dff1eb;
+
+      --accent: #f2c879;
+      --accent-light: #fff3d8;
+
+      --text: #193b35;
+      --muted: #687d77;
+
+      --white: #ffffff;
+      --background: #f7fbf9;
+      --surface: #eef7f3;
+
+      --border: rgba(45, 122, 106, 0.13);
+
+      --shadow: 0 20px 60px rgba(35, 91, 79, 0.10);
+
+      --radius: 22px;
+      --nav-height: 76px;
+    }
+
+    /* =========================================================
+       CONTAINER
+    ========================================================= */
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    /* =========================================================
+       NAVBAR
+    ========================================================= */
+
+    .navbar {
+      position: fixed;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1160px, 92%);
+      height: var(--nav-height);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 25px;
+
+      background: rgba(255, 255, 255, 0.68);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      border-radius: 18px;
+      box-shadow: 0 10px 40px rgba(33, 85, 73, 0.08);
+
+      z-index: 1000;
+    }
+
+    /* LOGO */
+
+ .logo-mark {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    box-shadow: none;
+}
+
+.logo-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+.logo:hover .logo-mark img {
+    transform: scale(1.08);
+}
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .logo-text strong {
+      font-size: 1.05rem;
+    }
+
+    .logo-text span {
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.8px;
+      margin-top: 3px;
+    }
+
+    /* NAV LINKS */
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      position: relative;
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: #355b53;
+      transition: 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 2px;
+      border-radius: 5px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 11px 19px !important;
+      background: var(--primary);
+      color: white !important;
+      border-radius: 30px;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .nav-cta::after {
+      display: none;
+    }
+
+    /* HAMBURGER */
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: none;
+      border-radius: 12px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      cursor: pointer;
+      font-size: 1.15rem;
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 90vh;
+      padding-top: 145px;
+      padding-bottom: 80px;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(242, 200, 121, 0.24),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 10% 85%,
+          rgba(45, 122, 106, 0.12),
+          transparent 28%
+        ),
+        var(--background);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: rgba(45, 122, 106, 0.05);
+      right: -160px;
+      top: 150px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .hero-content {
+      animation: fadeUp 0.9s ease forwards;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 7px 13px;
+      border-radius: 30px;
+
+      background: var(--primary-light);
+      color: var(--primary-dark);
+
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+
+      margin-bottom: 22px;
+    }
+
+    .eyebrow i {
+      color: var(--primary);
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(3rem, 5.5vw, 5rem);
+      line-height: 1.06;
+      color: var(--text);
+      margin-bottom: 24px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero-description {
+      max-width: 590px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+
+      padding: 14px 23px;
+      border-radius: 50px;
+
+      font-weight: 600;
+      font-size: 0.92rem;
+
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 12px 25px rgba(45, 122, 106, 0.22);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 16px 30px rgba(45, 122, 106, 0.27);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--primary-dark);
+      border-color: var(--border);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      background: var(--primary-light);
+    }
+
+    /* HERO VISUAL */
+
+    .hero-visual {
+      position: relative;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .care-card {
+      width: min(420px, 90%);
+      min-height: 430px;
+
+      border-radius: 32px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(45, 122, 106, 0.95),
+          rgba(32, 93, 81, 0.96)
+        );
+
+      position: relative;
+      overflow: hidden;
+
+      box-shadow: 0 30px 70px rgba(32, 93, 81, 0.22);
+
+      transform: rotate(2deg);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: 0.5s ease;
+    }
+
+    .care-card:hover {
+      transform: rotate(0deg) scale(1.025);
+    }
+
+    .care-card::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      top: -120px;
+      right: -100px;
+    }
+
+    .care-card::after {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: rgba(242,200,121,0.13);
+      bottom: -120px;
+      left: -90px;
+    }
+
+    .care-symbol {
+      text-align: center;
+      color: white;
+      z-index: 2;
+    }
+
+    .heart-icon {
+      width: 105px;
+      height: 105px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin: auto auto 25px;
+
+      border-radius: 50%;
+
+      background: rgba(255,255,255,0.13);
+      border: 1px solid rgba(255,255,255,0.18);
+
+      font-size: 45px;
+      color: #ffe5a8;
+
+      animation: heartbeat 2.2s infinite;
+    }
+
+    .care-symbol h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .care-symbol p {
+      opacity: 0.85;
+      font-size: 0.92rem;
+    }
+
+    .floating-badge {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      padding: 13px 17px;
+
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(15px);
+
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+
+      font-size: 0.82rem;
+      font-weight: 600;
+
+      color: var(--text);
+    }
+
+    .floating-badge i {
+      color: var(--primary);
+      font-size: 18px;
+    }
+
+    .badge-one {
+      left: 0;
+      top: 80px;
+    }
+
+    .badge-two {
+      right: -10px;
+      bottom: 80px;
+    }
+
+    /* =========================================================
+       SECTION COMMON
+    ========================================================= */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 55px;
+    }
+
+    .section-label {
+      color: var(--primary);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      margin-bottom: 10px;
+    }
+
+    .section-header h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.2rem, 4vw, 3.3rem);
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .section-header p {
+      color: var(--muted);
+    }
+
+    /* =========================================================
+       SERVICES
+    ========================================================= */
+
+    .services {
+      background: white;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      padding: 30px 24px;
+      background: #f9fcfb;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: 0.35s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+      border-color: transparent;
+    }
+
+    .service-icon {
+      width: 53px;
+      height: 53px;
+      border-radius: 16px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--primary-light);
+      color: var(--primary);
+
+      font-size: 21px;
+      margin-bottom: 22px;
+
+      transition: 0.3s ease;
+    }
+
+    .service-card:hover .service-icon {
+      transform: scale(1.1) rotate(-4deg);
+      background: var(--primary);
+      color: white;
+    }
+
+    .service-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 9px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.87rem;
+      line-height: 1.7;
+    }
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about {
+      background: var(--surface);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-visual {
+      min-height: 430px;
+      border-radius: 32px;
+      background: var(--primary);
+      position: relative;
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      box-shadow: var(--shadow);
+    }
+
+    .about-visual::before {
+      content: "";
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      position: absolute;
+      top: -110px;
+      right: -100px;
+    }
+
+    .about-visual-content {
+      text-align: center;
+      color: white;
+      z-index: 2;
+      padding: 30px;
+    }
+
+    .about-visual-content i {
+      font-size: 65px;
+      color: #ffe3a3;
+      margin-bottom: 20px;
+    }
+
+    .about-visual-content h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .about-visual-content p {
+      opacity: 0.85;
+    }
+
+    .about-content h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .about-content > p {
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.7);
+      padding: 20px 15px;
+      border-radius: 17px;
+      text-align: center;
+      border: 1px solid rgba(45,122,106,0.08);
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--primary);
+      font-size: 1.7rem;
+      margin-bottom: 2px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.72rem;
+    }
+
+    /* =========================================================
+       WHY US
+    ========================================================= */
+
+    .why-us {
+      background: white;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .why-card {
+      padding: 30px;
+      border-radius: var(--radius);
+      background: var(--background);
+      transition: 0.35s ease;
+    }
+
+    .why-card:hover {
+      transform: scale(1.025);
+      box-shadow: var(--shadow);
+    }
+
+    .why-card i {
+      color: var(--primary);
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
+
+    .why-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact {
+      background: var(--surface);
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 2.8rem;
+      line-height: 1.15;
+      margin-bottom: 17px;
+    }
+
+    .contact-info > p {
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .contact-item-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+
+      border-radius: 13px;
+      background: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: var(--primary);
+    }
+
+    .contact-item span {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .contact-form {
+      background: white;
+      padding: 35px;
+      border-radius: 25px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 18px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 13px 15px;
+
+      border: 1px solid #dce9e5;
+      border-radius: 12px;
+
+      outline: none;
+      color: var(--text);
+      background: #fbfdfc;
+
+      transition: 0.25s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(45,122,106,0.08);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+    }
+
+    #form-message {
+      display: none;
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 10px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      background: #173c35;
+      color: white;
+      padding: 55px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr 0.7fr;
+      gap: 50px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-brand .logo {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .footer-brand .logo-text span {
+      color: rgba(255,255,255,0.55);
+    }
+
+    .footer-brand p {
+      max-width: 360px;
+      color: rgba(255,255,255,0.65);
+      font-size: 0.86rem;
+    }
+
+    footer h4 {
+      margin-bottom: 17px;
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.62);
+      font-size: 0.82rem;
+      transition: 0.25s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+      padding-left: 4px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icons a {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: rgba(255,255,255,0.08);
+      color: white;
+
+      transition: 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: var(--accent);
+      color: var(--text);
+      transform: translateY(-4px) scale(1.08);
+    }
+
+    .copyright {
+      text-align: center;
+      color: rgba(255,255,255,0.45);
+      font-size: 0.75rem;
+      padding-top: 22px;
+    }
+
+    /* =========================================================
+       ANIMATIONS
+    ========================================================= */
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      10% {
+        transform: scale(1.06);
+      }
+
+      20% {
+        transform: scale(1);
+      }
+    }
+
+    /* Scroll reveal */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       TABLET
+    ========================================================= */
+
+    @media (max-width: 950px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        min-height: 420px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .about-visual {
+        min-height: 330px;
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 700px) {
+
+      :root {
+        --nav-height: 64px;
+      }
+
+      .navbar {
+        top: 10px;
+        width: 94%;
+        height: 64px;
+        padding: 0 15px;
+      }
+
+      .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+
+        padding: 20px;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+
+        background: rgba(255,255,255,0.94);
+        backdrop-filter: blur(18px);
+
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+
+        transition: 0.3s ease;
+      }
+
+      .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .nav-links li {
+        width: 100%;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 11px;
+        border-radius: 10px;
+      }
+
+      .nav-links a:hover {
+        background: var(--primary-light);
+      }
+
+      .nav-links a::after {
+        display: none;
+      }
+
+      .nav-cta {
+        text-align: center;
+        margin-top: 5px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 135px;
+        padding-bottom: 65px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.65rem, 13vw, 4rem);
+      }
+
+      .hero-description {
+        font-size: 0.95rem;
+      }
+
+      .hero-visual {
+        min-height: 360px;
+      }
+
+      .care-card {
+        min-height: 350px;
+      }
+
+      .floating-badge {
+        font-size: 0.72rem;
+        padding: 10px 12px;
+      }
+
+      .badge-one {
+        left: -5px;
+        top: 45px;
+      }
+
+      .badge-two {
+        right: -5px;
+        bottom: 40px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .section-header {
+        margin-bottom: 40px;
+      }
+
+      .service-grid,
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .stat {
+        padding: 15px 8px;
+      }
+
+      .stat strong {
+        font-size: 1.35rem;
+      }
+
+      .stat span {
+        font-size: 0.63rem;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .contact-form {
+        padding: 25px 20px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    /* SMALL PHONES */
+
+    @media (max-width: 420px) {
+
+      .logo-text span {
+        display: none;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-visual {
+        min-height: 330px;
+      }
+
+      .care-card {
+        min-height: 320px;
+      }
+
+      .heart-icon {
+        width: 85px;
+        height: 85px;
+        font-size: 35px;
+      }
+
+      .care-symbol h3 {
+        font-size: 1.7rem;
+      }
+
+      .stats {
+        gap: 8px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =======================================================
+       NAVBAR
+  ======================================================== -->
+
+  <nav class="navbar">
+
+    <a href="#home" class="logo">
+
+    <div class="logo-mark">
+    <img src="careapy-india-logo.svg" alt="Careapy India">
+</div>
+
+      <div class="logo-text">
+        <strong>Careapy India</strong>
+        <span>CARE • COMFORT • HAPPINESS</span>
+      </div>
+
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact" class="nav-cta">Get Care</a></li>
+    </ul>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </nav>
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            <i class="fa-solid fa-heart"></i>
+            Care that feels personal
+          </div>
+
+          <h1>
+            Better care.<br>
+            <span>Happier days.</span>
+          </h1>
+
+          <p class="hero-description">
+            Compassionate elder care that brings comfort, companionship
+            and trusted support to seniors and their families.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#contact" class="btn btn-primary">
+              Talk to Us
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#services" class="btn btn-secondary">
+              Explore Services
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+          <div class="floating-badge badge-one">
+            <i class="fa-solid fa-shield-heart"></i>
+            Trusted Care
+          </div>
+
+          <div class="care-card">
+
+            <div class="care-symbol">
+
+              <div class="heart-icon">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <h3>Care with Heart</h3>
+
+              <p>
+                Because every elder deserves<br>
+                dignity, warmth and companionship.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="floating-badge badge-two">
+            <i class="fa-solid fa-face-smile"></i>
+            More Happiness
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SERVICES
+    ====================================================== -->
+
+    <section class="services" id="services">
+
+      <div class="container">
+
+        <div class="section-header reveal">
+
+          <div class="section-label">What we provide</div>
+
+          <h2>Care that covers<br>what matters.</h2>
+
+          <p>
+            Thoughtful support designed around the everyday needs
+            of seniors and their families.
+          </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+          <div class="service-card reveal">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-hand-holding-heart"></i>
+            </div>
+
+            <h3>Companionship</h3>
+
+            <p>
+              Friendly human connection, conversation and meaningful
+              everyday companionship.
+            </p>
+
+          </div>
+
+
+          <div class="service-card reveal">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-user-nurse"></i>
+            </div>
+
+            <h3>Nursing Support</h3>
+
+            <p>
+              Dependable assistance for everyday care and nursing
+              requirements.
+            </p>
+
+          </div>
+
+
+          <div class="service-card reveal">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-stethoscope"></i>
+            </div>
+
+            <h3>Medical Assistance</h3>
+
+            <p>
+              Help coordinating appointments, medical needs and
+              healthcare support.
+            </p>
+
+          </div>
+
+
+          <div class="service-card reveal">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-person-walking"></i>
+            </div>
+
+            <h3>Physiotherapy</h3>
+
+            <p>
+              Support for mobility, recovery and maintaining
+              independence.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section class="about" id="about">
+
+      <div class="container about-grid">
+
+        <div class="about-visual reveal">
+
+          <div class="about-visual-content">
+
+            <i class="fa-solid fa-people-roof"></i>
+
+            <h3>Care. Connect. Comfort.</h3>
+
+            <p>
+              Helping families care with confidence.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="about-content reveal">
+
+          <div class="section-label">About Careapy India</div>
+
+          <h2>
+            More than care.<br>
+            It's companionship.
+          </h2>
+
+          <p>
+            Careapy India exists to make elder care simpler, warmer
+            and more dependable. We connect seniors with thoughtful
+            support while giving families greater peace of mind.
+          </p>
+
+          <div class="stats">
+
+            <div class="stat">
+              <strong>24/7</strong>
+              <span>Care Support</span>
+            </div>
+
+            <div class="stat">
+              <strong>100%</strong>
+              <span>Personal Attention</span>
+            </div>
+
+            <div class="stat">
+              <strong>1:1</strong>
+              <span>Human Connection</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         WHY CAREAPY
+    ====================================================== -->
+
+    <section class="why-us">
+
+      <div class="container">
+
+        <div class="section-header reveal">
+
+          <div class="section-label">Why Careapy</div>
+
+          <h2>Simple. Human. Reliable.</h2>
+
+          <p>
+            We believe good elder care should feel reassuring,
+            respectful and genuinely human.
+          </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+          <div class="why-card reveal">
+
+            <i class="fa-solid fa-heart-circle-check"></i>
+
+            <h3>Compassion First</h3>
+
+            <p>
+              We treat every senior with patience, respect and dignity.
+            </p>
+
+          </div>
+
+
+          <div class="why-card reveal">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+            <h3>Trusted Support</h3>
+
+            <p>
+              We focus on dependable people and responsible care.
+            </p>
+
+          </div>
+
+
+          <div class="why-card reveal">
+
+            <i class="fa-solid fa-house-chimney-heart"></i>
+
+            <h3>Peace of Mind</h3>
+
+            <p>
+              Helping families feel connected even when they cannot
+              always be there.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section class="contact" id="contact">
+
+      <div class="container contact-wrapper">
+
+        <div class="contact-info reveal">
+
+          <div class="section-label">Let's talk</div>
+
+          <h2>
+            Looking for care<br>
+            for someone you love?
+          </h2>
+
+          <p>
+            Tell us what you need. Our team will understand your
+            requirements and help you find the right care.
+          </p>
+
+
+          <div class="contact-item">
+
+            <div class="contact-item-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+
+            <div>
+              <strong>Call us</strong>
+              <span>We'll be happy to help</span>
+            </div>
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <div class="contact-item-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <div>
+              <strong>Email us: </strong>
+              <span>hello@careapy.in</span>
+            </div>
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <div class="contact-item-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <div>
+              <strong>Serving families: </strong>
+              <span>Mumbai, Navi-Mumbai, Thane, Suburbs, Vasai-Virar</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <form class="contact-form reveal" id="contactForm">
+
+          <div class="form-grid">
+
+            <div class="form-group">
+
+              <label for="name">Your Name</label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="phone">Phone Number</label>
+
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter phone number"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="email">Email</label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter email"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="service">Care Needed</label>
+
+              <select id="service" name="service">
+
+                <option value="">Select service</option>
+                <option>Companionship</option>
+                <option>Nursing Support</option>
+                <option>Medical Assistance</option>
+                <option>Physiotherapy</option>
+                <option>Other</option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group full">
+
+              <label for="message">Tell us a little about your requirement</label>
+
+              <textarea
+                id="message"
+                name="message"
+                placeholder="How can we help?"
+              ></textarea>
+
+            </div>
+
+          </div>
+
+
+          <button type="submit" class="btn btn-primary submit-btn">
+
+            Request a Call Back
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+          </button>
+
+          <div id="form-message">
+            Thank you. We've received your request and will get in touch.
+          </div>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <a href="#home" class="logo">
+
+            <div class="logo-mark"></div>
+
+            <div class="logo-text">
+              <strong>Careapy India</strong>
+              <span>CARE • COMFORT • HAPPINESS</span>
+            </div>
+
+          </a>
+
+          <p>
+            Compassionate elder care that helps seniors live with
+            comfort, dignity and happiness.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>Quick Links</h4>
+
+          <ul class="footer-links">
+
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4>Connect With Us</h4>
+
+          <div class="social-icons">
+
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="#" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+        © <span id="year"></span> Careapy India. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
+  <script>
+
+    /* =========================================
+       MOBILE MENU
+    ========================================= */
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+
+      navLinks.classList.toggle("active");
+
+      const isOpen = navLinks.classList.contains("active");
+
+      menuToggle.setAttribute("aria-expanded", isOpen);
+
+      menuToggle.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+
+    });
+
+
+    /* Close mobile menu after clicking a link */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        menuToggle.innerHTML =
+          '<i class="fa-solid fa-bars"></i>';
+
+      });
+
+    });
+
+
+    /* =========================================
+       SCROLL REVEAL
+    ========================================= */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const revealObserver =
+      new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("active");
+
+              revealObserver.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    revealElements.forEach(element => {
+
+      revealObserver.observe(element);
+
+    });
+
+
+    /* =========================================
+       CONTACT FORM
+    ========================================= */
+
+    const contactForm =
+      document.getElementById("contactForm");
+
+    const formMessage =
+      document.getElementById("form-message");
+
+    contactForm.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      formMessage.style.display = "block";
+
+      contactForm.reset();
+
+      setTimeout(() => {
+
+        formMessage.style.display = "none";
+
+      }, 5000);
+
+    });
+
+
+    /* =========================================
+       CURRENT YEAR
+    ========================================= */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+  </script>
+
+</body>
+</html>

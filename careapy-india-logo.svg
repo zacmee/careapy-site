@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Careapy India two people heart logo</title>
+  <desc id="desc">Two people forming a heart with a small golden heart in the center.</desc>
+
+  <defs>
+    <linearGradient id="greenLeft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2D7A6A"/>
+      <stop offset="100%" stop-color="#205D51"/>
+    </linearGradient>
+
+    <linearGradient id="greenRight" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#55B89A"/>
+      <stop offset="100%" stop-color="#2D9B7D"/>
+    </linearGradient>
+
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD77A"/>
+      <stop offset="100%" stop-color="#F2B94B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left person's head -->
+  <circle cx="174" cy="92" r="39" fill="url(#greenLeft)"/>
+
+  <!-- Right person's head -->
+  <circle cx="337" cy="113" r="34" fill="url(#greenRight)"/>
+
+  <!-- Left person / heart half -->
+  <path
+    d="M174 139
+       C120 139 82 180 82 235
+       C82 302 135 354 244 425
+       L267 439
+       L229 383
+       C166 291 135 257 135 219
+       C135 194 151 174 174 174
+       C197 174 215 188 228 208
+       C239 224 252 231 270 232
+       C252 178 219 139 174 139 Z"
+    fill="url(#greenLeft)"
+  />
+
+  <!-- Right person / heart half -->
+  <path
+    d="M337 151
+       C388 151 430 190 430 244
+       C430 306 385 354 279 425
+       L246 447
+       L274 392
+       C335 296 376 265 376 227
+       C376 203 360 185 337 185
+       C315 185 298 198 285 218
+       C276 231 264 239 246 239
+       C258 183 293 151 337 151 Z"
+    fill="url(#greenRight)"
+  />
+
+  <!-- Small heart representing happiness/care -->
+  <path
+    d="M256 265
+       C245 247 214 250 214 276
+       C214 298 256 326 256 326
+       C256 326 298 298 298 276
+       C298 250 267 247 256 265 Z"
+    fill="url(#gold)"
+  />
+</svg>
