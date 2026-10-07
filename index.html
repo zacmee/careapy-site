@@ -2795,7 +2795,7 @@
                     <span>
                         Service area: 
                         <strong>
-                            All over Mumbai
+                            All Across Mumbai
                         </strong>
                     </span>
 
@@ -2806,157 +2806,160 @@
         </div>
 
 
-        <form
-            class="contact-form reveal"
-            id="contactForm">
+       <form
+    class="contact-form reveal"
+    id="contactForm">
 
-            <div class="form-grid">
+    <div class="form-grid">
 
-                <div class="field">
+        <div class="field">
 
-                    <label for="name">
-                        Your Name
-                    </label>
+            <label for="name">
+                Your Name
+            </label>
 
-                    <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        placeholder="Enter your name"
-                        autocomplete="name"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="field">
-
-                    <label for="email">
-                        Email
-                    </label>
-
-                    <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="you@example.com"
-                        autocomplete="email"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="field">
-
-                    <label for="phone">
-                        Phone Number
-                    </label>
-
-                    <input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        placeholder="Your phone number"
-                        autocomplete="tel"
-                    >
-
-                </div>
-
-
-                <div class="field">
-
-                    <label for="care">
-                        What do you need help with?
-                    </label>
-
-                    <select
-                        id="care"
-                        name="care">
-
-                        <option value="">
-                            Select an option
-                        </option>
-
-                        <option>
-                            Elder Care
-                        </option>
-
-                        <option>
-                            Companionship
-                        </option>
-
-                        <option>
-                            Nursing Support
-                        </option>
-
-                        <option>
-                            Medical Assistance
-                        </option>
-
-                        <option>
-                            Physiotherapy
-                        </option>
-
-                        <option>
-                            Not sure yet
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="field full">
-
-                    <label for="message">
-                        Tell us a little about your requirement
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        placeholder="Tell us about the senior's situation and the kind of support you are looking for."
-                        required></textarea>
-
-                </div>
-
-            </div>
-
-
-            <!-- Honeypot field -->
             <input
+                id="name"
+                name="name"
                 type="text"
-                name="website"
-                tabindex="-1"
-                autocomplete="off"
-                style="position:absolute;left:-9999px;"
+                placeholder="Enter your name"
+                autocomplete="name"
+                required
             >
 
-
-            <button
-                class="btn btn-primary form-submit"
-                type="submit">
-
-                Send Enquiry
-
-                <i class="fa-solid fa-paper-plane"></i>
-
-            </button>
+        </div>
 
 
-            <div
-                class="form-message"
-                id="formMessage">
+        <div class="field">
 
-                Thank you. Your enquiry has been prepared.
-                Connect this form to your preferred email,
-                CRM or backend before launch.
+            <label for="email">
+                Email
+            </label>
 
-            </div>
+            <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+            >
 
-        </form>
+        </div>
+
+
+        <div class="field">
+
+            <label for="phone">
+                Phone Number
+            </label>
+
+            <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="Your phone number"
+                autocomplete="tel"
+            >
+
+        </div>
+
+
+        <div class="field">
+
+            <label for="care">
+                What do you need help with?
+            </label>
+
+            <select
+                id="care"
+                name="care">
+
+                <option value="">
+                    Select an option
+                </option>
+
+                <option value="Elder Care">
+                    Elder Care
+                </option>
+
+                <option value="Companionship">
+                    Companionship
+                </option>
+
+                <option value="Nursing Support">
+                    Nursing Support
+                </option>
+
+                <option value="Medical Assistance">
+                    Medical Assistance
+                </option>
+
+                <option value="Physiotherapy">
+                    Physiotherapy
+                </option>
+
+                <option value="Not sure yet">
+                    Not sure yet
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="field full">
+
+            <label for="message">
+                Tell us a little about your requirement
+            </label>
+
+            <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us about the senior's situation and the kind of support you are looking for."
+                required></textarea>
+
+        </div>
+
+    </div>
+
+
+    <!-- Honeypot field for basic spam protection -->
+    <input
+        type="text"
+        name="website"
+        tabindex="-1"
+        autocomplete="off"
+        style="position:absolute;left:-9999px;"
+    >
+
+
+    <button
+        class="btn btn-primary form-submit"
+        id="submitButton"
+        type="submit">
+
+        <span id="submitText">
+            Send Enquiry
+        </span>
+
+        <i class="fa-solid fa-paper-plane"></i>
+
+    </button>
+
+
+    <div
+        class="form-message"
+        id="formMessage"
+        role="status"
+        aria-live="polite">
+
+        Thank you. Our Careapy team will contact you shortly.
+
+    </div>
+
+</form>
 
     </div>
 
@@ -3361,31 +3364,108 @@
        CONTACT FORM
     ===================================================== */
 
-    const contactForm =
-        document.getElementById("contactForm");
+  const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+const submitButton = document.getElementById("submitButton");
+const submitText = document.getElementById("submitText");
 
-    const formMessage =
-        document.getElementById("formMessage");
+
+/*
+    IMPORTANT:
+    Replace this URL with your Google Apps Script
+    Web App URL after we create it.
+*/
+const GOOGLE_SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbxT5XrEza7OgVVDa8DF2ruYZBRxCx3YG9lqO0NMMNYX2Fb44SlNSrvs4tbT7FyP3eYiEg/exec";
 
 
-    contactForm.addEventListener(
-        "submit",
-        function(event) {
+contactForm.addEventListener("submit", async function(event) {
 
-            event.preventDefault();
+    event.preventDefault();
 
-            formMessage.style.display =
-                "block";
 
-            contactForm.reset();
+    // Basic honeypot spam protection
+    const honeypot =
+        contactForm.querySelector('[name="website"]').value;
 
-            formMessage.scrollIntoView({
-                behavior: "smooth",
-                block: "nearest"
-            });
+    if (honeypot) {
+        return;
+    }
 
-        }
-    );
+
+    // Disable button while submitting
+    submitButton.disabled = true;
+
+    submitText.textContent = "Sending...";
+
+
+    // Collect form data
+    const formData = new FormData(contactForm);
+
+
+    try {
+
+        /*
+            Google Apps Script accepts
+            URL encoded form data.
+        */
+        const response = await fetch(
+            GOOGLE_SCRIPT_URL,
+            {
+                method: "POST",
+
+                body: new URLSearchParams(formData),
+
+                mode: "no-cors"
+            }
+        );
+
+
+        /*
+            With no-cors we cannot read the response
+            from Google Apps Script, but the request
+            itself will be sent.
+        */
+
+        formMessage.textContent =
+            "Thank you. Your enquiry has been received. Our Careapy team will contact you shortly.";
+
+        formMessage.style.display = "block";
+
+
+        // Clear the form only after submission
+        contactForm.reset();
+
+
+        formMessage.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        });
+
+
+    } catch (error) {
+
+        console.error(
+            "Form submission error:",
+            error
+        );
+
+
+        formMessage.textContent =
+            "Sorry, we couldn't submit your enquiry. Please try again or contact Careapy directly.";
+
+        formMessage.style.display = "block";
+
+    }
+
+
+    // Enable button again
+    submitButton.disabled = false;
+
+    submitText.textContent =
+        "Send Enquiry";
+
+});
 
 
     /* =====================================================
